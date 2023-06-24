@@ -1,27 +1,15 @@
-# Задача №49. Решение в группах
-# Создать телефонный справочник с
-# возможностью импорта и экспорта данных в
-# формате .txt. Фамилия, имя, отчество, номер
-# телефона - данные, которые должны находиться
-# в файле.
-#   1. Программа должна выводить данные
-#   2. Программа должна сохранять данные в
-# текстовом файле
-#   3. Пользователь может ввести одну из
-# характеристик для поиска определенной
-# записи(Например имя или фамилию
-# человека)
-#   4. Использование функций. Ваша программа
-# не должна быть линейной
+import datetime
+import user
 
 from user import *
 from data import *
+from datetime import datetime
 
 while True:
     op = get_op()
     if op == 1:
-        workerIn = data_in()
-        write_data(workerIn)
+        noteIn = data_in()
+        write_data(noteIn)
     elif op == 2:
         opros2 = data_out()
         content = read_data()
@@ -34,4 +22,7 @@ while True:
         opros4 = data_change()
         content = read_data()
         change_data(content, opros4)
+    elif op == 5:
+        lst = read_data()
+        print(lst)
     else: break

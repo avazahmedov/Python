@@ -1,12 +1,14 @@
-def write_data(user):
+def write_data(note):
     with open ('baza.txt', 'a') as baza:
-        baza.write(user + '\n')
+        baza.write(note + '\n')
     
 
 def read_data ():
     with open ('baza.txt', 'r') as baza:
         content = baza.readlines()
         return content
+
+
     
 
 def find_data(lst, str):
